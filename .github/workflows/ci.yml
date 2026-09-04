@@ -51,7 +51,7 @@ jobs:
       - name: Run BDD tests
         env:
           PYTHONPATH: .
-        run: behave
+        run: behave tests/bdd/features
 
   frontend:
     runs-on: ubuntu-latest
