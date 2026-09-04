@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+weather.db
+*.log
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+.env
+.vscode/
+
+pacts/

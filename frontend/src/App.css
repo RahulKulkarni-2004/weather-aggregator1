@@ -1,0 +1,50 @@
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.app {
+  text-align: center;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.search-box input {
+  padding: 12px;
+  width: 250px;
+  font-size: 16px;
+}
+
+.search-box button {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.weather-card {
+  margin: 20px auto;
+  padding: 25px;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.history {
+  margin-top: 40px;
+}
+
+.history-item {
+  padding: 12px;
+  margin: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.error {
+  color: red;
+}
