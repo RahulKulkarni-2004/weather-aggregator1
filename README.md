@@ -327,7 +327,7 @@ pytest -q
 ## Running BDD Tests
 
 ```powershell
-behave
+behave tests/bdd/features
 ```
 
 ---
