@@ -28,7 +28,7 @@ def test_fetch_and_save_weather():
 
     # Assert
     assert result == reading
-    provider.get_weather.assert_called_once_with("Belagavi")
+    provider.get_weather.assert_called_once_with("belagavi")
     repository.save.assert_called_once_with(reading)
 
 
@@ -76,7 +76,7 @@ def test_get_weather_history():
 
     # Assert
     assert result == readings
-    repository.find_by_city.assert_called_once_with("Belagavi")
+    repository.find_by_city.assert_called_once_with("belagavi")
 
 
 def test_get_latest_weather():
@@ -101,7 +101,7 @@ def test_get_latest_weather():
 
     # Assert
     assert result == reading
-    repository.find_latest_by_city.assert_called_once_with("Belagavi")
+    repository.find_latest_by_city.assert_called_once_with("belagavi")
 
 
 

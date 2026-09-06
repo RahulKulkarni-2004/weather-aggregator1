@@ -13,5 +13,3 @@ frontend/.vite/
 
 .env
 .vscode/
-
-pacts/

@@ -1,3 +1,6 @@
+
+
+
 from behave import given, when, then
 
 from app.application.weather_service import WeatherService
@@ -63,7 +66,8 @@ def step_check_temperature(context, temperature):
 
 @then('the weather should be saved for "{city}"')
 def step_weather_saved(context, city):
-    readings = context.repository.find_by_city(city)
+    normalized_city = city.strip().casefold()
+    readings = context.repository.find_by_city(normalized_city)
     assert len(readings) == 1
 
 
@@ -80,8 +84,9 @@ def step_request_history(context, city):
 
 @then('I should receive weather readings for "{city}"')
 def step_check_history(context, city):
+    normalized_city = city.strip().casefold()
     assert len(context.result) > 0
-    assert context.result[0].city == city
+    assert context.result[0].city == normalized_city
 
 
 @when('I request the latest weather for "{city}"')

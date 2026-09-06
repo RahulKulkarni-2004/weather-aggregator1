@@ -41,7 +41,7 @@ def test_fetch_weather():
 
         data = response.get_json()
 
-        assert data["city"] == "Belagavi"
+        assert data["city"] == "belagavi"
         assert data["temperature"] == 25.0
         assert data["wind_speed"] == 10.0
         assert data["description"] == "Clear sky"

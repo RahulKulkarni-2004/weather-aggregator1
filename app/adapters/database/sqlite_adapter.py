@@ -61,7 +61,7 @@ class SQLiteWeatherRepository(WeatherRepository):
             """
             SELECT city, temperature, wind_speed, description, fetched_at
             FROM weather_readings
-            WHERE city = ?
+            WHERE city = ? COLLATE NOCASE
             ORDER BY fetched_at DESC
             """,
             (city,),
@@ -88,7 +88,7 @@ class SQLiteWeatherRepository(WeatherRepository):
             """
             SELECT city, temperature, wind_speed, description, fetched_at
             FROM weather_readings
-            WHERE city = ?
+            WHERE city = ? COLLATE NOCASE
             ORDER BY fetched_at DESC
             LIMIT 1
             """,
